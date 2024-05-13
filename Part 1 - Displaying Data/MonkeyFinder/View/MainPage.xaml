@@ -19,6 +19,26 @@
                     Name="Red-shanked douc"
                     Location="Some location 3"
                     Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Location="Some location 4"
+                    Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Location="Some location 5"
+                    Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Location="Some location 6"
+                    Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Location="Some location 7"
+                    Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
+                <model:Monkey 
+                    Name="Red-shanked douc"
+                    Location="Some location 8"
+                    Image="https://media.posterlounge.com/img/products/700000/697380/697380_poster.jpg"/>
             </x:Array>
         </CollectionView.ItemsSource>
         <CollectionView.ItemTemplate>
@@ -28,14 +48,10 @@
                            HeightRequest="100"
                            WidthRequest="100"
                            Aspect="AspectFill"/>
-                    <Label>
-                        <Label.Text>
-                            <MultiBinding StringFormat="{}{0} - {1}">
-                                <Binding Path="Name"/>
-                                <Binding Path="Location"/>
-                            </MultiBinding>
-                        </Label.Text>
-                    </Label>
+                    <VerticalStackLayout Padding="10" Spacing="4" VerticalOptions="Center">
+                        <Label Text="{Binding Name}" FontSize="24"></Label>
+                        <Label Text="{Binding Location}" FontSize="12"></Label>
+                    </VerticalStackLayout>
                 </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
