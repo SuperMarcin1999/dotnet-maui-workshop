@@ -28,10 +28,14 @@
                            HeightRequest="100"
                            WidthRequest="100"
                            Aspect="AspectFill"/>
-                    <VerticalStackLayout Padding="10" Spacing="4" VerticalOptions="Center">
-                        <Label Text="{Binding Name}" FontSize="24"></Label>
-                        <Label Text="{Binding Location}" FontSize="12"></Label>
-                    </VerticalStackLayout>
+                    <Label>
+                        <Label.Text>
+                            <MultiBinding StringFormat="{}{0} - {1}">
+                                <Binding Path="Name"/>
+                                <Binding Path="Location"/>
+                            </MultiBinding>
+                        </Label.Text>
+                    </Label>
                 </HorizontalStackLayout>
             </DataTemplate>
         </CollectionView.ItemTemplate>
